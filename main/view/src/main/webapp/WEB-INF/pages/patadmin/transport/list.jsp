@@ -5,13 +5,13 @@
 <%@taglib uri="patadmin" prefix="p"%>
 <html>
   <head>
-    <t:head maintitle="patadmin" title="patadmin.transport" entry="navbar"/>
+    <t:head maintitle="patadmin" title="patient.transport" entry="navbar"/>
   </head>
   <body>
     <div class="container">
       <%@include file="../navbar.jsp"%>
 
-      <h2><spring:message code="patadmin.transport"/></h2>
+      <h2><spring:message code="patient.transport"/></h2>
 
       <div class="table-responsive">
         <table class="table table-striped table-condensed table-full">

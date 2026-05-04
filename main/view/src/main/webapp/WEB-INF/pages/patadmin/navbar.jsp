@@ -44,7 +44,7 @@
       </c:if>
       <c:if test="${accessLevels.contains(AccessLevel.PatadminTransport)}">
         <li class="${viewType eq 'transport' ? 'active' : ''}">
-          <a href="<c:url value="/patadmin/transport"/>"><spring:message code="patadmin.transport"/></a>
+          <a href="<c:url value="/patadmin/transport"/>"><spring:message code="patient.transport"/></a>
         </li>
       </c:if>
       <c:if test="${accessLevels.contains(AccessLevel.PatadminInfo)}">
