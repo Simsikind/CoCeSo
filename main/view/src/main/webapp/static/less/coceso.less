@@ -964,3 +964,335 @@ td.license_icon {
 }
 
 @import "winman.less";
+
+/**
+ * Dark Mode
+ */
+
+html[data-theme="dark"] {
+
+  body {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+
+  body.login {
+    background-color: #1e1e1e;
+  }
+
+  a {
+    color: #6fa8dc;
+    &:hover { color: #9ecaf0; }
+  }
+
+  .page-header {
+    border-bottom-color: #444;
+    color: #e0e0e0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #e0e0e0;
+  }
+
+  .form-control {
+    background-color: #3a3a3a;
+    border-color: #555;
+    color: #e0e0e0;
+    &:focus {
+      background-color: #444;
+      border-color: #6fa8dc;
+      color: #e0e0e0;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.4), 0 0 8px rgba(111,168,220,.4);
+    }
+  }
+
+  input[type="number"] {
+    background-color: #3a3a3a;
+    border-color: #555;
+    color: #e0e0e0;
+  }
+
+  .input-group-addon {
+    background-color: #444;
+    border-color: #555;
+    color: #e0e0e0;
+  }
+
+  .btn-default {
+    background-color: #3a3a3a !important;
+    background-image: none !important;
+    border-color: #666 !important;
+    color: #e0e0e0 !important;
+    &:hover, &:focus {
+      background-color: #4a4a4a !important;
+      color: #fff !important;
+    }
+  }
+
+  // navbar-default (used in main app view)
+  .navbar-default {
+    background-color: #2a2a2a !important;
+    background-image: none !important;
+    border-color: #444 !important;
+    .navbar-brand {
+      color: #e0e0e0 !important;
+      &:hover { color: #fff !important; }
+    }
+    .navbar-nav > li > a {
+      color: #e0e0e0 !important;
+      &:hover { color: #fff !important; background-color: #3a3a3a !important; }
+    }
+    .navbar-nav > .active > a,
+    .navbar-nav > .active > a:hover,
+    .navbar-nav > .active > a:focus {
+      background-color: #3a3a3a !important;
+      color: #fff !important;
+    }
+    .navbar-nav > .open > a,
+    .navbar-nav > .open > a:hover {
+      background-color: #3a3a3a !important;
+      color: #fff !important;
+    }
+    .navbar-text { color: #e0e0e0 !important; }
+    .navbar-toggle {
+      border-color: #555 !important;
+      &:hover { background-color: #3a3a3a !important; }
+      .icon-bar { background-color: #e0e0e0 !important; }
+    }
+  }
+
+  // btn-group: clear gradient so dark backgrounds are visible
+  .btn-group {
+    .btn-default {
+      background-image: none !important;
+    }
+  }
+
+  // glyphicons and icons: make them visible on dark backgrounds
+  .glyphicon {
+    color: #ccc;
+  }
+  .btn .glyphicon {
+    color: inherit;
+  }
+
+  .panel {
+    background-color: #2a2a2a;
+    border-color: #444;
+  }
+
+  .panel-default {
+    border-color: #444;
+    > .panel-heading {
+      background-color: #333;
+      border-color: #444;
+      color: #e0e0e0;
+    }
+    > .panel-footer {
+      background-color: #333;
+      border-color: #444;
+    }
+  }
+
+  .panel-body {
+    background-color: #2a2a2a;
+  }
+
+  .panel .toggle-indicator {
+    color: #777;
+  }
+
+  .table {
+    color: #e0e0e0;
+    > thead > tr > th,
+    > tbody > tr > td,
+    > tfoot > tr > td {
+      border-color: #444;
+    }
+    > thead > tr > th {
+      border-bottom-color: #555;
+    }
+  }
+
+  .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #252525;
+  }
+
+  .table-hover > tbody > tr:hover {
+    background-color: #333;
+  }
+
+  .table > tbody > tr.success > td {
+    background-color: #1a3a2a;
+    color: #a0d0a0;
+  }
+
+  // Bootstrap gradient overrides background-color, so we only fix text colors
+  .alert-info    { color: #1a3a5a !important; }
+  .alert-success { color: #1a4a1a !important; }
+  .alert-danger  { color: #6b1a1a !important; }
+  .alert-warning { color: #5a3a00 !important; }
+
+  .btn-success { color: #1a4a1a !important; }
+  .btn-warning { color: #000000 !important; }
+  .btn-default { color: #000000 !important; }
+
+  .dropdown-menu {
+    background-color: #2a2a2a;
+    border-color: #555;
+    > li > a {
+      color: #e0e0e0;
+      &:hover, &:focus {
+        background-color: #3a3a3a;
+        color: #fff;
+      }
+    }
+    .divider {
+      background-color: #444;
+    }
+  }
+
+  .modal-content {
+    background-color: #2a2a2a;
+    border-color: #555;
+    color: #e0e0e0;
+  }
+
+  .modal-header, .modal-footer {
+    border-color: #444;
+  }
+
+  .nav-tabs {
+    border-bottom-color: #555;
+    > li > a {
+      color: #ccc;
+      &:hover {
+        color: #fff;
+        background-color: #333;
+        border-color: #555 #555 #333;
+      }
+    }
+    > li.active > a,
+    > li.active > a:hover,
+    > li.active > a:focus {
+      background-color: #2a2a2a !important;
+      background-image: none !important;
+      border-color: #555 #555 #2a2a2a !important;
+      color: #ffffff !important;
+    }
+  }
+
+  .ui-widget-content {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: #e0e0e0;
+  }
+
+  .ui-widget-header {
+    background: #3a3a3a !important;
+    background-image: none !important;
+    border-color: #555 !important;
+    color: #ffffff !important;
+  }
+
+  .ui-state-default,
+  .ui-widget-content .ui-state-default {
+    background: #3a3a3a;
+    border-color: #555;
+    color: #e0e0e0;
+  }
+
+  .ui-state-hover,
+  .ui-widget-content .ui-state-hover,
+  .ui-state-focus,
+  .ui-widget-content .ui-state-focus {
+    background: #4a4a4a;
+    border-color: #666;
+    color: #fff;
+  }
+
+  .ui-state-active,
+  .ui-widget-content .ui-state-active {
+    background: #4a6a8a;
+    border-color: #6fa8dc;
+    color: #fff;
+  }
+
+  .ui-dialog .ui-dialog-titlebar {
+    background: #3a3a3a !important;
+    background-image: none !important;
+    border-color: #555 !important;
+    color: #ffffff !important;
+  }
+
+  .ui-dialog-titlebar-close,
+  .ui-dialog-titlebar-minimize {
+    color: #ffffff !important;
+    background: #555 !important;
+    background-image: none !important;
+    border-color: #777 !important;
+  }
+
+  .ui-accordion-header {
+    background: #333;
+    border-color: #444;
+    color: #e0e0e0;
+  }
+
+  .ui-taskbar {
+    .ui-state-default {
+      border-color: #555;
+      color: #ccc;
+    }
+    .ui-state-open, .ui-state-focus {
+      background: #4a4a4a !important;
+      background-image: none !important;
+      color: #fff !important;
+      text-shadow: none !important;
+      border-color: #666 !important;
+    }
+  }
+
+  .map-nocoords, .map-legend {
+    background: rgba(30,30,30,0.9);
+    color: #e0e0e0;
+  }
+
+  .map-nocoords, .map-legend-expanded {
+    color: #e0e0e0;
+  }
+
+  .distance-marker {
+    background: #2a2a2a;
+    color: #e0e0e0;
+    &:after { color: #6fa8dc; }
+  }
+
+  .unit_list_edit {
+    background: #252525;
+    .unit_state span { background: #444; }
+  }
+
+  .timer-warning { color: #f0c070; }
+  .timer-danger { color: #f08080; }
+  .priority-icon { color: #f08080; }
+
+  .ui-accordion-header .incident_ao {
+    color: #777;
+  }
+
+  .newly-added-patient {
+    background-color: #1a3a22 !important;
+    border-left-color: #28a745 !important;
+  }
+}
+
+// Theme toggle icon via CSS
+html[data-theme="light"] #theme-toggle-icon::before,
+html:not([data-theme]) #theme-toggle-icon::before {
+  content: "\1F319\00A0";
+}
+
+html[data-theme="dark"] #theme-toggle-icon::before {
+  content: "\2600\00A0";
+}

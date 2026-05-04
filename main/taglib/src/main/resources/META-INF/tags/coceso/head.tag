@@ -22,6 +22,25 @@
 
 <c:set var="suffix" value="${cocesoConfig.debug ? '' : '-dist'}"/>
 
+<script type="text/javascript">
+  (function () {
+    var theme = 'light';
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+      var c = cookies[i].trim();
+      if (c.indexOf('theme=') === 0) { theme = c.substring(6); break; }
+    }
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+
+  window.cocesoToggleTheme = function () {
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    document.cookie = 'theme=' + next + '; path=/; max-age=31536000; SameSite=Lax';
+    return false;
+  };
+</script>
+
 <title>
   <spring:message code="${empty maintitle ? 'coceso' : maintitle}"/>
   <c:if test="${not empty title}"> - <spring:message code="${title}"/></c:if>

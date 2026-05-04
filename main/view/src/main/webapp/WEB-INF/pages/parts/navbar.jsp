@@ -41,6 +41,11 @@
       <sec:authorize access="@auth.hasAccessLevel('Dashboard')">
         <li><a href="<c:url value="/dashboard"/>"><spring:message code="nav.dashboard"/></a></li>
         </sec:authorize>
+      <li>
+        <a href="#" onclick="return window.cocesoToggleTheme();">
+          <span id="theme-toggle-icon"></span><spring:message code="theme"/>
+        </a>
+      </li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><spring:message code="language"/> <b class="caret"></b></a>
         <ul class="dropdown-menu">
