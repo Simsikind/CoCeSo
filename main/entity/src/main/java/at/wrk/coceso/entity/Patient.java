@@ -330,8 +330,8 @@ public class Patient implements Serializable, ConcernBoundEntity {
     }
 
     return incidents.stream()
-        .filter(i -> i.getType() == IncidentType.Transport)
-        .filter(i -> !i.getState().isDone())
+        .filter(i -> i.getType() == IncidentType.Transport) //Only return transport incidents
+        .filter(i -> !i.getState().isDone())                //Only active transports are needed for the overview in the treatment
         .flatMap(i -> i.getUnits().entrySet().stream())
         .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
   }
