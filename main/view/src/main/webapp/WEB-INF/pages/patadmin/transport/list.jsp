@@ -23,8 +23,8 @@
             <th><spring:message code="patadmin.group"/></th>
             <th><spring:message code="patient.ambulance"/></th>
             <th><spring:message code="incident.casus.short"/></th>
-            <th><spring:message code="patadmin.transport.unit"/></th>
-            <th><spring:message code="patadmin.transport.unitstate"/></th>
+            <th><spring:message code="unit"/></th>
+            <th><spring:message code="unit.state"/></th>
             <th><spring:message code="patadmin.hospital"/></th>
           </tr>
           <c:forEach items="${patients}" var="patient">
