@@ -3,7 +3,6 @@ package at.wrk.coceso.controller.patadmin;
 import at.wrk.coceso.entity.Concern;
 import at.wrk.coceso.service.patadmin.PatadminService;
 import at.wrk.coceso.utils.ActiveConcern;
-import at.wrk.coceso.utils.Initializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -36,7 +35,6 @@ public class TransportOverviewController {
   public String showHome(
           final ModelMap map,
           @ActiveConcern final Concern concern) {
-    map.addAttribute("patients", Initializer.initGroups(patadminService.getAllInTransport(concern)));
     patadminService.addAccessLevels(map, concern);
     return "patadmin/transport/list";
   }

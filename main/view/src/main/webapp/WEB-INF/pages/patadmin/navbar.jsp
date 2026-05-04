@@ -63,6 +63,10 @@
       </li>
     </ul>
 
+    <p class="navbar-text navbar-right" id="patadmin-navbar-status">
+      <span class="glyphicon" data-bind="css: wsIconClass" title="WebSocket"></span>
+    </p>
+
     <c:if test="${showSearch}">
       <form action="<c:url value="/patadmin/${viewType}/search"/>" class="navbar-form navbar-right" method="get">
         <div class="form-group">
