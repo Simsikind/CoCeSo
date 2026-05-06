@@ -67,7 +67,7 @@ require(["config"], function() {
         highlightTimeout = setTimeout(function() {
           registrationHomeVm.newPatientId(null);
           highlightTimeout = null;
-        }, 4000);
+        }, 10000);
       }
     });
   });
