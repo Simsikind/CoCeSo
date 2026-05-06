@@ -113,7 +113,7 @@
               </tr>
             </thead>
             <tbody data-bind="foreach: treatmentPatients">
-              <tr data-bind="css: {'success': patient.id === $root.newPatientId, 'newly-added-patient': patient.id === $root.newPatientId}">
+              <tr data-bind="css: {'success': patient.id === $root.newPatientId(), 'newly-added-patient': patient.id === $root.newPatientId()}">
                 <td data-bind="text: patient.id"></td>
                 <td data-bind="text: patient.externalId"></td>
                 <td data-bind="text: patient.lastname()"></td>

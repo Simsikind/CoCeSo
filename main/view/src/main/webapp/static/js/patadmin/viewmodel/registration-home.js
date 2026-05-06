@@ -26,7 +26,7 @@ define([
     vm.registrationViewUrl = conf.get("registrationViewUrl");
     vm.registrationEditUrl = conf.get("registrationEditUrl");
     vm.groupUrl = conf.get("groupUrl");
-    vm.newPatientId = conf.get("newPatientId") || null;
+    vm.newPatientId = ko.observable(conf.get("newPatientId") || null);
 
     // Patients in active Treatment incidents, with group name and id for linking.
     vm.treatmentPatients = ko.pureComputed(function() {

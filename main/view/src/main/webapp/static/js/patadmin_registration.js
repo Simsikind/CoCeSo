@@ -54,13 +54,19 @@ require(["config"], function() {
 
     $(".autofocus").first().focus();
 
-    // Scroll to and briefly highlight newly added patient
+    // Scroll to and briefly highlight newly added patient.
+    // newPatientId is cleared after the timeout so KO removes the CSS class on re-render.
+    var highlightTimeout = null;
     registrationHomeVm.treatmentPatients.subscribe(function() {
+      if (!registrationHomeVm.newPatientId()) {
+        return;
+      }
       var $newlyAdded = $(".newly-added-patient");
-      if ($newlyAdded.length > 0) {
+      if ($newlyAdded.length > 0 && !highlightTimeout) {
         $("html, body").animate({scrollTop: $newlyAdded.offset().top - 100}, 800);
-        setTimeout(function() {
-          $newlyAdded.removeClass("newly-added-patient success");
+        highlightTimeout = setTimeout(function() {
+          registrationHomeVm.newPatientId(null);
+          highlightTimeout = null;
         }, 4000);
       }
     });
